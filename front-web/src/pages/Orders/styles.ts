@@ -51,3 +51,90 @@ export const StepsNumber = styled.span`
   color: var(--primary-color);
   margin-right: 10px;
 `;
+
+export const OrdersListContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const OrdersListItems = styled.div`
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 235px);
+  grid-gap: 20px 15px;
+  justify-content: space-between;
+`;
+
+export const OrdersCardContainer = styled.div`
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+
+  .selected {
+    border: 4px solid #008e5b;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+  }
+`;
+
+export const OrdersCardTitle = styled.h3`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.015em;
+  color: var(--primary-color);
+  text-align: center;
+
+  .selected {
+    color: #008e5b;
+  }
+`;
+
+export const OrdersCardImage = styled.img`
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+`;
+
+export const OrdersCardPrice = styled.h3`
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: -0.015em;
+  color: var(--primary-color);
+  text-align: left;
+
+  .selected {
+    color: #008e5b;
+  }
+`;
+
+export const OrdersCardDescription = styled.div`
+  border-top: 1px solid #e6e6e6;
+  margin-top: 15px;
+  padding-top: 15px;
+
+  h3 {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    color: var(--secondary-color);
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.015em;
+
+    color: var(--secondary-color);
+  }
+`;
