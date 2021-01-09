@@ -1,5 +1,8 @@
-import styled from 'styled-components';
-import AsyncSelect from 'react-select/async';
+import styled, { css } from 'styled-components';
+
+interface OrderCardContainerProps {
+  isSelected: boolean;
+}
 
 export const OrderContainer = styled.div`
   background-color: var(--light-color);
@@ -20,6 +23,13 @@ export const OrderStepsContent = styled.div`
   display: flex;
   padding: 25px 0;
   width: 70%;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 90%;
+  }
 `;
 
 export const StepsTitle = styled.h1`
@@ -40,6 +50,10 @@ export const StepsItems = styled.ul`
     line-height: 25px;
     letter-spacing: -0.015em;
     color: var(--secondary-color);
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0;
   }
 `;
 
@@ -66,26 +80,28 @@ export const OrderListItems = styled.div`
   justify-content: space-between;
 `;
 
-export const OrderCardContainer = styled.div`
+export const OrderCardContainer = styled.div<OrderCardContainerProps>`
   background-color: #fff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 15px;
   cursor: pointer;
 
-  .selected {
-    border: 4px solid #008e5b;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-  }
+  ${props =>
+    props.isSelected &&
+    css`
+      border: 4px solid #008e5b;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+    `}
 
   &:hover {
     transform: scale(1.01);
   }
 `;
 
-export const OrderCardTitle = styled.h3`
+export const OrderCardTitle = styled.h3<OrderCardContainerProps>`
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
@@ -93,9 +109,11 @@ export const OrderCardTitle = styled.h3`
   color: var(--primary-color);
   text-align: center;
 
-  .selected {
-    color: #008e5b;
-  }
+  ${props =>
+    props.isSelected &&
+    css`
+      color: #008e5b;
+    `}
 `;
 
 export const OrderCardImage = styled.img`
@@ -105,7 +123,7 @@ export const OrderCardImage = styled.img`
   width: 100%;
 `;
 
-export const OrderCardPrice = styled.h3`
+export const OrderCardPrice = styled.h3<OrderCardContainerProps>`
   font-weight: bold;
   font-size: 24px;
   line-height: 33px;
@@ -113,9 +131,11 @@ export const OrderCardPrice = styled.h3`
   color: var(--primary-color);
   text-align: left;
 
-  .selected {
-    color: #008e5b;
-  }
+  ${props =>
+    props.isSelected &&
+    css`
+      color: #008e5b;
+    `}
 `;
 
 export const OrderCardDescription = styled.div`
@@ -143,6 +163,10 @@ export const OrderCardDescription = styled.div`
 export const OrderLocationContainer = styled.div`
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const OrderLocationContent = styled.div`
@@ -170,6 +194,10 @@ export const OrderLocationContent = styled.div`
       min-height: 60px;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const OrderLocationTitle = styled.h3`
@@ -185,4 +213,83 @@ export const FilterContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+`;
+
+export const OrderSummaryContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+`;
+
+export const OrderSummaryContent = styled.div`
+  width: calc(70% - 40px);
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const AmountSelectedContainer = styled.span`
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: -0.015em;
+  display: block;
+  margin-bottom: 10px;
+`;
+
+export const AmountSelected = styled.span`
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: -0.015em;
+  margin-right: 5px;
+`;
+
+export const OrderSummaryTotal = styled.span`
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: -0.015em;
+  color: #fff;
+  display: block;
+`;
+
+export const OrderSummaryMakeOrder = styled.button`
+  width: 220px;
+  height: 45px;
+  background: #fff;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: var(--primary-color);
+  border: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #fcf2f2;
+    transform: scale(1.01);
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 15px;
+    width: 100%;
+  }
 `;

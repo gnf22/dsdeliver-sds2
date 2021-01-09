@@ -8,27 +8,29 @@ import {
   OrderCardPrice,
   OrderCardDescription,
 } from './styles';
+import { formatPrice } from './helpers';
 
 type Props = {
   product: Product;
+  onSelectProduct: (product: Product) => void;
+  isSelected: boolean;
 };
 
-function formatPrice(price: number) {
-  const formatter = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-    minimumFractionDigits: 2,
-  });
-
-  return formatter.format(price);
-}
-
-const ProductCard: React.FC<Props> = ({ product }: Props) => {
+const ProductCard: React.FC<Props> = ({
+  product,
+  onSelectProduct,
+  isSelected,
+}: Props) => {
   return (
-    <OrderCardContainer>
-      <OrderCardTitle>{product.name}</OrderCardTitle>
+    <OrderCardContainer
+      isSelected={isSelected}
+      onClick={() => onSelectProduct(product)}
+    >
+      <OrderCardTitle isSelected={isSelected}>{product.name}</OrderCardTitle>
       <OrderCardImage src={product.imageUri} alt={product.name} />
-      <OrderCardPrice>{formatPrice(product.price)}</OrderCardPrice>
+      <OrderCardPrice isSelected={isSelected}>
+        {formatPrice(product.price)}
+      </OrderCardPrice>
       <OrderCardDescription>
         <h3>Descrição</h3>
         <p>{product.description}</p>
