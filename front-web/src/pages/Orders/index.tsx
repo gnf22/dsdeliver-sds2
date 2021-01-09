@@ -27,7 +27,7 @@ const Orders: React.FC = () => {
       .get('/products')
       .then(response => setProducts(response.data))
 
-      .catch(error => {
+      .catch(() => {
         toast.warning('Erro ao listar produtos');
       });
   }, []);

@@ -60,6 +60,7 @@ const OrderLocation: React.FC<Props> = ({ onChangeLocation }: Props) => {
     onChangeLocation({
       latitude: place.position.lat,
       longitude: place.position.lng,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       address: place.label!,
     });
   };
