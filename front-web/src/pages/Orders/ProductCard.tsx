@@ -1,12 +1,12 @@
 import React from 'react';
-import { Product } from '../../types';
+import { Product } from './types';
 
 import {
-  OrdersCardContainer,
-  OrdersCardTitle,
-  OrdersCardImage,
-  OrdersCardPrice,
-  OrdersCardDescription,
+  OrderCardContainer,
+  OrderCardTitle,
+  OrderCardImage,
+  OrderCardPrice,
+  OrderCardDescription,
 } from './styles';
 
 type Props = {
@@ -25,15 +25,15 @@ function formatPrice(price: number) {
 
 const ProductCard: React.FC<Props> = ({ product }: Props) => {
   return (
-    <OrdersCardContainer>
-      <OrdersCardTitle>{product.name}</OrdersCardTitle>
-      <OrdersCardImage src={product.imageUri} alt={product.name} />
-      <OrdersCardPrice>{formatPrice(product.price)}</OrdersCardPrice>
-      <OrdersCardDescription>
+    <OrderCardContainer>
+      <OrderCardTitle>{product.name}</OrderCardTitle>
+      <OrderCardImage src={product.imageUri} alt={product.name} />
+      <OrderCardPrice>{formatPrice(product.price)}</OrderCardPrice>
+      <OrderCardDescription>
         <h3>Descrição</h3>
         <p>{product.description}</p>
-      </OrdersCardDescription>
-    </OrdersCardContainer>
+      </OrderCardDescription>
+    </OrderCardContainer>
   );
 };
 

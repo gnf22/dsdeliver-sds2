@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import AsyncSelect from 'react-select/async';
 
-export const OrdersContainer = styled.div`
+export const OrderContainer = styled.div`
   background-color: var(--light-color);
 
   h3 {
@@ -8,14 +9,14 @@ export const OrdersContainer = styled.div`
   }
 `;
 
-export const OrdersStepsContainer = styled.header`
+export const OrderStepsContainer = styled.header`
   display: flex;
   justify-content: center;
   background-color: #fff;
   margin-bottom: 30px;
 `;
 
-export const OrdersStepsContent = styled.div`
+export const OrderStepsContent = styled.div`
   display: flex;
   padding: 25px 0;
   width: 70%;
@@ -52,12 +53,12 @@ export const StepsNumber = styled.span`
   margin-right: 10px;
 `;
 
-export const OrdersListContainer = styled.div`
+export const OrderListContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const OrdersListItems = styled.div`
+export const OrderListItems = styled.div`
   width: 70%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 235px);
@@ -65,7 +66,7 @@ export const OrdersListItems = styled.div`
   justify-content: space-between;
 `;
 
-export const OrdersCardContainer = styled.div`
+export const OrderCardContainer = styled.div`
   background-color: #fff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -84,7 +85,7 @@ export const OrdersCardContainer = styled.div`
   }
 `;
 
-export const OrdersCardTitle = styled.h3`
+export const OrderCardTitle = styled.h3`
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
@@ -97,14 +98,14 @@ export const OrdersCardTitle = styled.h3`
   }
 `;
 
-export const OrdersCardImage = styled.img`
+export const OrderCardImage = styled.img`
   border-radius: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
   width: 100%;
 `;
 
-export const OrdersCardPrice = styled.h3`
+export const OrderCardPrice = styled.h3`
   font-weight: bold;
   font-size: 24px;
   line-height: 33px;
@@ -117,7 +118,7 @@ export const OrdersCardPrice = styled.h3`
   }
 `;
 
-export const OrdersCardDescription = styled.div`
+export const OrderCardDescription = styled.div`
   border-top: 1px solid #e6e6e6;
   margin-top: 15px;
   padding-top: 15px;
@@ -137,4 +138,51 @@ export const OrdersCardDescription = styled.div`
 
     color: var(--secondary-color);
   }
+`;
+
+export const OrderLocationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const OrderLocationContent = styled.div`
+  width: 70%;
+  margin: 30px 0 120px 0;
+  padding: 20px 0;
+  height: 400px;
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    z-index: 0;
+  }
+
+  .filter {
+    width: 80%;
+
+    > div {
+      border-radius: 10px;
+      min-height: 60px;
+    }
+  }
+`;
+
+export const OrderLocationTitle = styled.h3`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: var(--secondary-color);
+`;
+
+export const FilterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 `;

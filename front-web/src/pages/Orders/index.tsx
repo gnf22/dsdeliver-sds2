@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
-import { Product } from '../../types';
+import { OrderLocationData, Product } from './types';
+import OrderLocation from './OrderLocation';
 import ProductList from './ProductList';
 import StepsHeader from './StepsHeader';
 
-import { OrdersContainer } from './styles';
+import { OrderContainer } from './styles';
 
 const Orders: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-
-  console.log(products);
+  const [orderLocation, setOrderLocation] = useState<OrderLocationData>();
 
   useEffect(() => {
     api
@@ -19,10 +19,13 @@ const Orders: React.FC = () => {
   }, []);
 
   return (
-    <OrdersContainer>
+    <OrderContainer>
       <StepsHeader />
       <ProductList products={products} />
-    </OrdersContainer>
+      <OrderLocation
+        onChangeLocation={location => setOrderLocation(location)}
+      />
+    </OrderContainer>
   );
 };
 

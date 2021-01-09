@@ -2,8 +2,8 @@
 import React from 'react';
 
 import {
-  OrdersStepsContainer,
-  OrdersStepsContent,
+  OrderStepsContainer,
+  OrderStepsContent,
   StepsTitle,
   StepsItems,
   StepsNumber,
@@ -11,8 +11,8 @@ import {
 
 const StepHeader: React.FC = () => {
   return (
-    <OrdersStepsContainer>
-      <OrdersStepsContent>
+    <OrderStepsContainer>
+      <OrderStepsContent>
         <StepsTitle>
           SIGA AS
           <br />
@@ -29,8 +29,8 @@ const StepHeader: React.FC = () => {
             <strong> "ENVIAR PEDIDO"</strong>
           </li>
         </StepsItems>
-      </OrdersStepsContent>
-    </OrdersStepsContainer>
+      </OrderStepsContent>
+    </OrderStepsContainer>
   );
 };
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Product } from '../../types';
+import { Product } from './types';
 import ProductCard from './ProductCard';
 
-import { OrdersListContainer, OrdersListItems } from './styles';
+import { OrderListContainer, OrderListItems } from './styles';
 
 type Props = {
   products: Product[];
@@ -10,13 +10,13 @@ type Props = {
 
 const ProductList: React.FC<Props> = ({ products }: Props) => {
   return (
-    <OrdersListContainer>
-      <OrdersListItems>
+    <OrderListContainer>
+      <OrderListItems>
         {products.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </OrdersListItems>
-    </OrdersListContainer>
+      </OrderListItems>
+    </OrderListContainer>
   );
 };
 
