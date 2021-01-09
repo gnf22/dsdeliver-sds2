@@ -15,7 +15,7 @@ export function fetchLocalMapBox(local: string): any {
 }
 
 export function saveOrder(payload: OrderPayload): any {
-  return axios.post('http://localhost:8080/orders', payload);
+  return axios.post(`${process.env.REACT_APP_API_URL}/orders`, payload);
 }
 
 export default api;
