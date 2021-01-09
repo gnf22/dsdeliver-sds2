@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ReactComponent as MainImage } from '../../assets/main.svg';
+import Footer from '../../components/Footer';
 
 import {
   HomeContainer,
@@ -13,31 +14,34 @@ import {
 
 const Home: React.FC = () => {
   return (
-    <HomeContainer>
-      <HomeContent>
-        <HomeActions>
-          <HomeTitle>
-            Faça seu pedido
-            <br />
-            que entregamos
-            <br />
-            para você!!!
-          </HomeTitle>
+    <>
+      <HomeContainer>
+        <HomeContent>
+          <HomeActions>
+            <HomeTitle>
+              Faça seu pedido
+              <br />
+              que entregamos
+              <br />
+              para você!!!
+            </HomeTitle>
 
-          <HomeSubTitle>
-            Escolha seu pedido e em poucos minutos
-            <br />
-            levaremos na sua porta!
-          </HomeSubTitle>
+            <HomeSubTitle>
+              Escolha seu pedido e em poucos minutos
+              <br />
+              levaremos na sua porta!
+            </HomeSubTitle>
 
-          <a href="orders">FAZER PEDIDO</a>
-        </HomeActions>
+            <a href="orders">FAZER PEDIDO</a>
+          </HomeActions>
 
-        <HomeImage>
-          <MainImage />
-        </HomeImage>
-      </HomeContent>
-    </HomeContainer>
+          <HomeImage>
+            <MainImage />
+          </HomeImage>
+        </HomeContent>
+      </HomeContainer>
+      <Footer />
+    </>
   );
 };
 
