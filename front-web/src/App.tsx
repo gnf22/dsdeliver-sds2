@@ -2,7 +2,7 @@ import React from 'react';
 import Globalstyle from './styles/global';
 
 import NavBar from './components/NavBar';
-import Home from './components/Home';
+import Home from './pages/Home';
 
 // import { Container } from './styles';
 
