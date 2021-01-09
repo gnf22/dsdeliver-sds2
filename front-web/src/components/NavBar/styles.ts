@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainNavBar = styled.nav`
+export const Container = styled.nav`
   height: 70px;
   background-color: #da5c5c;
   padding-left: 47px;

@@ -2,14 +2,14 @@ import React from 'react';
 
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
-import { MainNavBar } from './styles';
+import { Container } from './styles';
 
 const NavBar: React.FC = () => {
   return (
-    <MainNavBar>
+    <Container>
       <Logo />
       <a href="home">DS Delivery</a>
-    </MainNavBar>
+    </Container>
   );
 };
 
