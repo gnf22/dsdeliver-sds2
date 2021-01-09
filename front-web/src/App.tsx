@@ -1,12 +1,16 @@
 import React from 'react';
-import './App.css';
+import Globalstyle from './styles/global';
+
+import NavBar from './components/NavBar';
 
 // import { Container } from './styles';
 
 const App: React.FC = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <NavBar />
+
+      <Globalstyle />
     </div>
   );
 };
