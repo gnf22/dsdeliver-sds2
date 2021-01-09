@@ -1,16 +1,11 @@
 import React from 'react';
+import Routes from './Routes';
 import Globalstyle from './styles/global';
-
-import NavBar from './components/NavBar';
-import Home from './pages/Home';
-
-// import { Container } from './styles';
 
 const App: React.FC = () => {
   return (
     <>
-      <NavBar />
-      <Home />
+      <Routes />
       <Globalstyle />
     </>
   );

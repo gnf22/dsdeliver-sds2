@@ -9,6 +9,7 @@ import {
   HomeActions,
   HomeTitle,
   HomeSubTitle,
+  HomeBtnOrder,
   HomeImage,
 } from './styles';
 
@@ -32,7 +33,7 @@ const Home: React.FC = () => {
               levaremos na sua porta!
             </HomeSubTitle>
 
-            <a href="orders">FAZER PEDIDO</a>
+            <HomeBtnOrder to="orders">FAZER PEDIDO</HomeBtnOrder>
           </HomeActions>
 
           <HomeImage>

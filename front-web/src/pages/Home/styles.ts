@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HomeContainer = styled.div`
   padding-top: 100px;
@@ -29,30 +30,10 @@ export const HomeContent = styled.div`
 `;
 
 export const HomeActions = styled.div`
-  a {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    height: 70px;
-    width: 235px;
-    display: inline-block;
+  @media only screen and (max-width: 768px) {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: -0.015em;
-    color: #fff;
-
-    &:hover {
-      background-color: var(--primary-hover-color);
-      transform: scale(1.01);
-    }
-
-    @media only screen and (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
   }
 `;
 
@@ -79,6 +60,26 @@ export const HomeSubTitle = styled.h3`
 
   @media only screen and (max-width: 768px) {
     text-align: center;
+  }
+`;
+
+export const HomeBtnOrder = styled(Link)`
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  height: 70px;
+  width: 235px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: -0.015em;
+  color: #fff;
+
+  &:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.01);
   }
 `;
 
