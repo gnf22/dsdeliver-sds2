@@ -42,7 +42,7 @@ export const Text = styled.Text`
 
 export const ProductList = styled.View`
   border-top-color: #e6e6e6;
-  border-top-width: 1;
-  margin-top: 20;
-  padding-top: 15;
+  border-top-width: 1px;
+  margin-top: 20px;
+  padding-top: 15px;
 `;
