@@ -25,12 +25,21 @@ Delivery App Web and Mobile with Java and React
   <img alt="GitHub" src="https://img.shields.io/github/license/gnf22/dsdeliver-sds2.svg">
 </p>
 
+<p align="center">
+  <a href="#information_source-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
 <p align="center">
   <a href="https://sds2-gnf.netlify.app/" target="_blank">
     <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1563043495/readme_logos/demo_on_netlify_bbuvjz.png">
   </a>
 </p>
+
+## :information_source: About the Project
+
+DS Delivery is a Delivery application encompassing orders management over pre-registered products. Using: Java Spring Boot, React JS and React Native.
 
 ## :rocket: Technologies
 This readme was written based on the [Luke Morales / Rocketshoes readme](https://github.com/lukemorales/react-rocketshoes)
