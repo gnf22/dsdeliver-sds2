@@ -25,11 +25,6 @@ Delivery App Web and Mobile with Java and React
   <img alt="GitHub" src="https://img.shields.io/github/license/gnf22/dsdeliver-sds2.svg">
 </p>
 
-<p align="center">
-  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-</p>
 
 <p align="center">
   <a href="https://sds2-gnf.netlify.app/" target="_blank">
