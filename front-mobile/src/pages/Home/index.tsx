@@ -1,7 +1,9 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useCallback } from 'react';
 import { Image } from 'react-native';
 
 import logoImg from '../../assets/deliveryman.png';
+import Header from '../../components/Header';
 
 import {
   Container,
@@ -13,12 +15,15 @@ import {
 } from './styles';
 
 const Home: React.FC = () => {
+  const navigation = useNavigation();
+
   const handleOnPress = useCallback(() => {
-    /** */
-  }, []);
+    navigation.navigate('Orders');
+  }, [navigation]);
 
   return (
     <>
+      <Header />
       <Container>
         <Image source={logoImg} />
         <Title>Acompanhe os pedidos e {'\n'} entregue no prazo</Title>
